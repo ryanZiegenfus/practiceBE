@@ -4,7 +4,7 @@ const Posts = require('../models/post_model');
 
 router.use(express.json())
 
-router.get('/posts', (req, res) => {
+router.get('/', (req, res) => {
     Posts.find()
     .then(posts => {
         res.status(201).json({posts})
